@@ -14,6 +14,7 @@ boy-scout-task-manager/
 │   │   │
 │   │   ├── controllers/
 │   │   │   ├── authController.js     # Login, register, logout
+│   │   │   ├── adminController.js
 │   │   │   ├── userController.js     # Get users, update profile
 │   │   │   ├── taskController.js     # Create, update, delete tasks, drag-drop status
 │   │   │   ├── analyticsController.js # Get task statistics for dashboard
@@ -21,6 +22,7 @@ boy-scout-task-manager/
 │   │   │
 │   │   ├── routes/
 │   │   │   ├── authRoutes.js         # /api/auth/login, /register
+│   │   │   ├── adminRoutes.js
 │   │   │   ├── userRoutes.js         # /api/users
 │   │   │   ├── taskRoutes.js         # /api/tasks (CRUD + update status)
 │   │   │   ├── analyticsRoutes.js    # /api/analytics (dashboard stats)
@@ -31,11 +33,12 @@ boy-scout-task-manager/
 │   │   │
 │   │   └── app.js                    # Express app setup
 │   │
-│   ├── .env.example
+│   ├── .env
 │   ├── package.json
 │   └── server.js                     # Start server here
 │
 ├── frontend/
+│   ├── node_modules/
 │   ├── public/
 │   │   ├── index.html
 │   │   └── images/
@@ -51,15 +54,18 @@ boy-scout-task-manager/
 │   │   │       └── menu-icon.svg
 │   │   │
 │   │   ├── components/
-│   │   │   ├── Navbar.jsx            # Top navigation bar
-│   │   │   ├── KanbanBoard.jsx       # Drag-drop board (ONGOING/DONE/CANCELLED)
+│   │   │   ├── NavBar.jsx            # Top navigation bar
+│   │   │   ├── KanBanBoard.jsx       # Drag-drop board (ONGOING/DONE/CANCELLED)
 │   │   │   ├── TaskCard.jsx          # Single task card
 │   │   │   ├── TaskForm.jsx          # Create/edit task modal
 │   │   │   ├── AnalyticsChart.jsx    # Charts for dashboard
 │   │   │   └── ArchiveList.jsx       # List of archived tasks
+│   │   │   └── UserForm.jsx
 │   │   │
 │   │   ├── pages/
 │   │   │   ├── Login.jsx             # Login page
+│   │   │   ├── AdminManagement.jsx
+│   │   │   ├── RoleSection.jsx       # Admin or scout
 │   │   │   ├── Register.jsx          # Sign up page
 │   │   │   ├── Dashboard.jsx         # Analytics overview (charts, stats)
 │   │   │   ├── Workspace.jsx         # Kanban board (main workspace)
@@ -67,9 +73,20 @@ boy-scout-task-manager/
 │   │   │
 │   │   ├── App.jsx                   # Main app component
 │   │   ├── index.js                  # React entry point
-│   │   └── index.css                 # Global styles
+│   │   └── index.css                 # main file
+│   │   └── styles/
+│   │       ├── reset.css
+│   │       ├── auth.css
+│   │       ├── layout.css
+│   │       ├── kanban.css
+│   │       ├── modal.css
+│   │       ├── dashboard.css
+│   │       ├── archive.css
+│   │       ├── admin.css
+│   │       └── responsive.css 
 │   │
-│   ├── .env.example
+│   ├── .env
+│   └── package-lock.json
 │   └── package.json
 │
 ├── .gitignore
@@ -78,6 +95,32 @@ boy-scout-task-manager/
 
 
 ```
+
+```
+#FIRST TIME RUNNING
+cd backend 
+npm install (install dependencies if not already installed)
+npm start
+
+cd frontend
+npm install (install dependencies if not already installed)
+npm start
+
+#TO RUN THE PROGRAM
+terminal 1
+```
+cd backend
+npm start
+```
+
+terminal 2
+```
+cd frontend
+npm start
+```
+
+```
+
 
 
 ```
