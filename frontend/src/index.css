@@ -1,0 +1,12 @@
+/* frontend/src/index.css */
+
+/* Import all CSS modules */
+@import './styles/reset.css';
+@import './styles/auth.css';
+@import './styles/layout.css';
+@import './styles/kanban.css';
+@import './styles/modal.css';
+@import './styles/dashboard.css';
+@import './styles/archive.css';
+@import './styles/admin.css';
+@import './styles/responsive.css';
