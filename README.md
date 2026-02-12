@@ -107,17 +107,16 @@ npm install (install dependencies if not already installed)
 npm start
 
 #TO RUN THE PROGRAM
-terminal 1
-```
+
+//terminal 1
 cd backend
 npm start
-```
 
-terminal 2
-```
+
+//terminal 2
 cd frontend
 npm start
-```
+
 
 ```
 
