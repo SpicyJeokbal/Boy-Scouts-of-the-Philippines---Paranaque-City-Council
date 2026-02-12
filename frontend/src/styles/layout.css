@@ -1,0 +1,176 @@
+/* frontend/src/styles/layout.css */
+
+/* =================== SIDEBAR =================== */
+.sidebar {
+  width: 110px;
+  background: white;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 70px;
+}
+
+.nav-item {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: #666;
+  text-decoration: none;
+  font-size: 12px;
+  transition: all 0.2s;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.nav-item:hover {
+  background: #f5f5f5;
+}
+
+.nav-item.active {
+  color: #2c5f2d;
+  background: #e8f5e9;
+  border-left: 3px solid #2c5f2d;
+}
+
+.nav-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.sign-out {
+  margin-top: auto;
+}
+
+/* =================== MAIN CONTENT =================== */
+.main-content {
+  flex: 1;
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Search Bar */
+.search-bar {
+  background: white;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  gap: 15px;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2c5f2d;
+}
+
+.filter-btn {
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Scouts Page Styles */
+.scouts-grid {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.scout-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.scout-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.scout-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.scout-info {
+  flex: 1;
+}
+
+.scout-info h3 {
+  font-size: 18px;
+  color: #2d3748;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.scout-email {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 10px;
+}
+
+.scout-meta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.scout-role {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: #f0fff4;
+  color: #276749;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.scout-joined {
+  font-size: 12px;
+  color: #a0aec0;
+}

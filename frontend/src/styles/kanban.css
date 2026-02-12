@@ -1,0 +1,164 @@
+/* frontend/src/styles/kanban.css */
+
+/* =================== KANBAN BOARD =================== */
+.board {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.column {
+  min-width: 400px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.column-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 8px;
+}
+
+.column-count {
+  background: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #666;
+  font-weight: 600;
+}
+
+.column-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-card-btn {
+  background: white;
+  border: 2px dashed #d0d0d0;
+  color: #999;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.add-card-btn:hover {
+  border-color: #2c5f2d;
+  color: #2c5f2d;
+}
+
+.drop-zone {
+  flex: 1;
+  min-height: 200px;
+  transition: background 0.2s;
+}
+
+.drop-zone.drag-over {
+  background: rgba(44, 95, 45, 0.1);
+  border: 2px dashed #2c5f2d;
+  border-radius: 8px;
+}
+
+/* =================== TASK CARDS =================== */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: grab;
+  transition: all 0.2s;
+  border-left: 4px solid #2c5f2d;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.card.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.card-cancelled {
+  border-left-color: #e74c3c;
+  opacity: 0.7;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  flex: 1;
+}
+
+.card-menu {
+  color: #999;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 5px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.card-priority {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.priority-low {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.priority-medium {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.priority-high {
+  background: #ffebee;
+  color: #c62828;
+}

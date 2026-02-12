@@ -1,0 +1,103 @@
+/* frontend/src/styles/archive.css */
+
+/* =================== ARCHIVE PAGE =================== */
+.archive-list {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.archive-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #999;
+}
+
+.archive-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.archive-task-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.archive-task-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-delete-archive {
+  padding: 8px 16px;
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.btn-delete-archive:hover {
+  background: #c62828;
+  color: white;
+}
+
+.archive-card-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.archive-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.archive-label {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.archive-status {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.status-done {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-cancelled {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.archive-priority {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.archive-days-remaining {
+  font-weight: 600;
+  color: #f57c00;
+}
